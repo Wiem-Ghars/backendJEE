@@ -7,15 +7,15 @@
 
         <properties>
             <!-- Your PostgreSQL connection -->
-            <!--
+
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:postgresql://localhost:5432/gestion_db"/>
             <property name="jakarta.persistence.jdbc.user" value="openpg"/>
-            <property name="jakarta.persistence.jdbc.password" value="openpgpwd"/>-->
-
-                      <property name="jakarta.persistence.jdbc.url" value="${DATABASE_URL}"/>
-                       <property name="jakarta.persistence.jdbc.user" value="${DATABASE_USER}"/>
-                       <property name="jakarta.persistence.jdbc.password" value="${DATABASE_PASSWORD}"/>
+            <property name="jakarta.persistence.jdbc.password" value="openpgpwd"/>
+            <!--
+                                 <property name="jakarta.persistence.jdbc.url" value="${DATABASE_URL}"/>
+                                  <property name="jakarta.persistence.jdbc.user" value="${DATABASE_USER}"/>
+                                  <property name="jakarta.persistence.jdbc.password" value="${DATABASE_PASSWORD}"/>-->
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.postgresql.Driver"/>
 
