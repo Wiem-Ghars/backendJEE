@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+
+    <persistence-unit name="gestionPU" transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <!-- Your PostgreSQL connection -->
+            <!--
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/gestion_db"/>
+            <property name="jakarta.persistence.jdbc.user" value="openpg"/>
+            <property name="jakarta.persistence.jdbc.password" value="openpgpwd"/>-->
+
+                      <property name="jakarta.persistence.jdbc.url" value="${DATABASE_URL}"/>
+                       <property name="jakarta.persistence.jdbc.user" value="${DATABASE_USER}"/>
+                       <property name="jakarta.persistence.jdbc.password" value="${DATABASE_PASSWORD}"/>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="org.postgresql.Driver"/>
+
+            <!-- Hibernate will CREATE tables automatically from your Java classes -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- Show SQL in console so you can see what's happening -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.PostgreSQLDialect"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
