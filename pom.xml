@@ -91,6 +91,7 @@
     </dependencies>
 
     <build>
+        <finalName>gestionCollecteInfo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
